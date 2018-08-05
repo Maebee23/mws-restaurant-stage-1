@@ -1,0 +1,51 @@
+
+@media screen and (max-width: 330px) {
+  #restaurants-list{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+  #restaurants-list li{
+    border: none;
+  }
+  #cuisines-select{
+  font-size: 10pt;
+  width: 120px;
+  }
+  #neighborhoods-select{
+    font-size: 10pt;
+    width: 155px;
+  }
+
+
+}
+@media screen and (max-width: 375px)and (min-width: 331px){
+  #restaurants-list{
+    display: flex;
+    flex-direction: column;
+    margin: 0;
+    padding: 0;
+  }
+
+
+
+  #restaurants-list li{
+    border: none;
+  }
+  #neighborhoods-select{
+    width: 165px;
+  }
+  #cuisines-select{
+    width: 150px;
+  }
+}
+
+@media screen and (max-width: 450px) and (min-width: 376px){
+  #neighborhoods-select{
+    width: 165px;
+  }
+  #cuisines-select{
+    width: 165px;
+  }
+}

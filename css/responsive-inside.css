@@ -1,0 +1,93 @@
+@media screen and (max-width: 690px) {
+  .wrapper{
+    max-width: 100%;
+    display: grid;
+    margin: 0;
+    padding: 0;
+    grid-template-columns: 100%;
+    grid-template-rows: 40% 25% 200% 600% 700%;
+  }
+
+  .inside header{
+    width: 100%;
+    grid-row-start: 1;
+    grid-row-end: 2;
+    z-index: 10001;
+  }
+  .inside nav{
+    width: 100%;
+  }
+
+  #breadcrumb{
+    width: 100%;
+    grid-column-start: 2;
+    grid-row-end: 3;
+  }
+
+  .inside #map-container{
+    width: 100%;
+    grid-row-start: 3;
+    grid-row-end: 4;
+    top: 120px;
+    height: 200px;
+    position: absolute;
+  }
+
+  .inside #restaurant-container{
+    width: 100%;
+    padding: 0;
+    grid-row-start: 4;
+    grid-row-end: 5;
+    margin-top: 310px;
+    text-align: center;
+  }
+
+  #restaurant-cuisine{
+    width: 100%;
+  }
+
+  #reviews-container{
+    width: 100%;
+    grid-row-start: 5;
+    padding: 5px;
+  }
+  #restaurant-img{
+    border-radius: 30px 0px 30px 0px;
+  }
+  #reviews-list li {
+    border-radius: 30px 0px 30px 0px;
+    background: linear-gradient(#252831, #252831, 30px, #FFF 30px, #FFF);
+    /* margin: auto; */
+  }
+  .name {
+    display: inline-block;
+    color: #FFF;
+    padding: 5px;
+  }
+  .date {
+    color: #FFF;
+    float: right;
+    padding: 5px;
+  }
+  .rating {
+    background: gold;
+    width: 55px;
+    padding: 2px;
+  }
+  .inside #footer{
+    width: 100%;
+    bottom: 0;
+    padding: 10px 0 10px 0;
+    font-size: 8pt;
+    grid-row-start: 5;
+  }
+  #restaurant-hours{
+    margin:auto;
+  }
+}
+
+@media screen and (max-width: 320px){
+  #restaurant-name {
+    margin-top: 15%;
+  }
+}
