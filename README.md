@@ -10,7 +10,7 @@ Project 5 of Udacity's Front-End Web Development Nanodegree requires students to
 
 ## Requirements
 
-To view this application follow this [link].
+To view this application follow this [link](https://maebee23.github.io/mws-restaurant-stage-1/).
 
 ## Dependencies
 
