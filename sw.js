@@ -1,7 +1,7 @@
 // Service Worker
 let staticName = 'restaurant-v1';
 let cacheFiles = [
-  '/',
+  './',
   './restaurant.html',
   './css/styles.css',
   './css/responsive.css',
