@@ -28,7 +28,7 @@ self.addEventListener('install', function(event) {
 
   event.waitUntil(
     caches.open(staticName).then(cache => {
-      // console.log('[serviceWorker] Caching cacheFiles');
+      console.log('[serviceWorker] Caching cacheFiles');
     return cache.addAll(cacheFiles);
     }).catch(err => {
       console.log(err);
@@ -56,7 +56,7 @@ self.addEventListener('activate', function(event) {
 
 // Fetch requests from cache or network if not found
 self.addEventListener('fetch', function(event) {
-  // console.log("[serviceWorker] Fetching", event.request.url);
+  console.log("[serviceWorker] Fetching", event.request.url);
   event.respondWith(
     caches.match(event.request).then(response => {
       if (response) {
@@ -64,6 +64,8 @@ self.addEventListener('fetch', function(event) {
         return response;
       }
       return fetch(event.request);
+    }).catch(err => {
+      console.log(err);
     })
   )
 })
