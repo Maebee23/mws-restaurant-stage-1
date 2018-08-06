@@ -38,7 +38,7 @@ self.addEventListener('install', function(event) {
 
 // Activation
 self.addEventListener('activate', function(event) {
-  // console.log("[serviceWorker] Activated");
+  console.log("[serviceWorker] Activated");
   event.waitUntil(
     caches.keys().then(cacheNames => {
       Promise.all(
@@ -46,7 +46,7 @@ self.addEventListener('activate', function(event) {
           return thisCacheName.startsWith('restaurant-') &&
             thisCacheName !== staticName;
         }).map(thisCacheName => {
-          // console.log("[ServiceWorker] Removing Cached Files from " + thisCacheName);
+          console.log("[ServiceWorker] Removing Cached Files from " + thisCacheName);
           return caches.delete(thisCacheName);
         })
       );

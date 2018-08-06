@@ -10,7 +10,9 @@ Project 5 of Udacity's Front-End Web Development Nanodegree requires students to
 
 ## Requirements
 
-To view this application follow this [link](https://maebee23.github.io/mws-restaurant-stage-1/).
+To view this application please clone this repository and do the following:
+* cd into this directory
+* Depending on your version of python, run `python -m http.server 8000` or `python3 -m http.server 8000` or a port of you choosing, then   visit `http://localhost:8000` to display the working app.
 
 ## Dependencies
 

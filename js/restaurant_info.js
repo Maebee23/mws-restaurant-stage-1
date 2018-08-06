@@ -187,6 +187,7 @@ fillBreadcrumb = (restaurant=self.restaurant) => {
   const breadcrumb = document.getElementById('breadcrumb');
   const li = document.createElement('li');
   li.setAttribute('aria-current', 'page');
+  li.setAttribute('tabindex', '0');
   li.innerHTML = restaurant.name;
   breadcrumb.appendChild(li);
 }
