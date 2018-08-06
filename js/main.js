@@ -75,10 +75,10 @@ fillCuisinesHTML = (cuisines = self.cuisines) => {
  */
 initMap = () => {
   self.newMap = L.map('map', {
-    center: [40.722216, -73.987501],
-    zoom: 12,
-    scrollWheelZoom: false
-  });
+        center: [40.722216, -73.987501],
+        zoom: 12,
+        scrollWheelZoom: false
+      });
   L.tileLayer('https://api.tiles.mapbox.com/v4/{id}/{z}/{x}/{y}.jpg70?access_token={mapboxToken}', {
     mapboxToken: 'pk.eyJ1IjoibWFlYiIsImEiOiJjamthOGVxdGQxcW5iM3JuMW91M3QzczgxIn0.zCtLM5ryGQ3hkXP8ugc76w',
     maxZoom: 18,
@@ -168,7 +168,7 @@ createRestaurantHTML = (restaurant) => {
   image.src = DBHelper.imageUrlForRestaurant(restaurant);
   li.append(image);
 
-  const name = document.createElement('h1');
+  const name = document.createElement('h');
   name.innerHTML = restaurant.name;
   //
   // name.setAttribute('tabindex','0');
@@ -200,7 +200,6 @@ addMarkersToMap = (restaurants = self.restaurants) => {
     // Add marker to the map
     const marker = DBHelper.mapMarkerForRestaurant(restaurant, self.newMap);
     marker.on("click", onClick);
-
     function onClick() {
       window.location.href = marker.options.url;
     }
@@ -221,19 +220,19 @@ addMarkersToMap = (restaurants = self.restaurants) => {
 
 // seviceworker
 
-if (navigator.serviceWorker) {
+if(navigator.serviceWorker){
+
   navigator.serviceWorker.register('./sw.js')
-    .then((registration) => {
-      if (registration.installing) {
-        console.log('installing');
-      } else if (registration.waitng) {
-        console.log(installed);
-      } else if (registration.active) {
-        console.log(active);
-      }
-      console.log('Service Worker is registered');
-    })
-    .catch((err) => {
-      console.log('Service Worker failed.');
-    })
+  .then(registration => {
+    if(registration.installing){
+      console.log('installing');
+    }else if(registration.waitng){
+      console.log('installed');
+    }else if(registration.active){
+      console.log('Activated');
+    }
+    console.log('Service Worker is registered');
+  }).catch(err => {
+    console.log(err);
+  })
 }
